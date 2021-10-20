@@ -1,0 +1,13 @@
+#log {
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(212, 127, 87);
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#log:hover {
+    background-color: rgb(212, 108, 60);
+}
