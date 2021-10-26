@@ -11,3 +11,33 @@
 #log:hover {
     background-color: rgb(212, 108, 60);
 }
+
+
+/*Table Design*/
+
+.contacts table {
+    border: 1px solid gray;
+}
+
+.contacts table tr {
+    border: 1px solid gray;
+}
+
+.contacts table tr:nth-child(odd) {
+    background-color: rgb(202, 202, 202);
+}
+
+.delete {
+    background-color: red;
+    color: red;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+}
+
+.delete:hover {
+    background-color: rgb(129, 0, 0);
+}
