@@ -16,3 +16,30 @@ label {
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
 }
+
+
+
+/*Contact table*/
+
+.contacts {
+    position: relative;
+    margin-top: 40px;
+    width: 80%;
+    margin: auto;
+}
+
+.contacts table {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.search {
+    margin-bottom: 20px;
+}
+
+#search {
+    float: right;
+    padding: 7px;
+    border-radius: 5px;
+}
