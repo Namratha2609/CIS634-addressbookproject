@@ -17,3 +17,28 @@ body {
     border-radius: 10px;
     box-shadow: 3px 4px 10px 10px rgb(197, 197, 197);
 }
+
+
+/* Navbar of contact Page */
+
+header {
+    margin-bottom: 40px;
+}
+
+nav {
+    background-color: rgb(212, 127, 87);
+    padding: 20px 5px;
+    text-align: center;
+}
+
+nav h2 {
+    color: white;
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    float: right;
+    margin-right: 20px;
+}
