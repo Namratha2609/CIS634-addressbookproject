@@ -18,7 +18,6 @@ label {
 }
 
 
-
 /*Contact table*/
 
 .contacts {
@@ -42,4 +41,22 @@ label {
     float: right;
     padding: 7px;
     border-radius: 5px;
+}
+
+
+/* Add Contact form */
+
+.add-contact {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    text-align: center;
+}
+
+.add-contact {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 3px 4px 10px 10px rgb(197, 197, 197);
 }
