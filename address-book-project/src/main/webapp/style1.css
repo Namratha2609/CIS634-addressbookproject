@@ -1,6 +1,7 @@
 html,
 body {
     font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
 }
 
 .login {
@@ -41,4 +42,22 @@ nav a {
     color: white;
     float: right;
     margin-right: 20px;
+}
+
+
+/*Add Contact Button*/
+
+.btn-add {
+    text-decoration: none;
+    background-color: rgb(0, 207, 28);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-add:hover {
+    background-color: rgb(0, 129, 22);
 }
