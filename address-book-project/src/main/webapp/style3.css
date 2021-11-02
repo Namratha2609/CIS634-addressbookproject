@@ -41,3 +41,43 @@
 .delete:hover {
     background-color: rgb(129, 0, 0);
 }
+
+
+/*Add Contact Page*/
+
+label {
+    width: 100px;
+    display: inline-block
+}
+
+#name,
+#address,
+#email,
+#phone {
+    padding: 8px 10px;
+    border: 1px solid #dadada;
+    border-radius: 7px;
+}
+
+#name:focus,
+#address:focus,
+#email:focus,
+#phone:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+#add {
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(212, 127, 87);
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#add:hover {
+    background-color: rgb(212, 108, 60);
+}
