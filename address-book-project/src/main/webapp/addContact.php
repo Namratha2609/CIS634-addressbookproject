@@ -12,10 +12,9 @@
 </head>
 
 <body>
-
     <div class="add-contact">
         <h2>Add Contact</h2><br>
-        <form id="contact" method="get" action="login.php">
+        <form id="contact" name="contact" method="post" action="login.php" onsubmit="return validate()">
             <label><b>Name</b></label>
             <input type="text" name="name" id="name" placeholder="Name">
             <br><br>
@@ -28,7 +27,7 @@
             <label><b>Phone</b></label>
             <input type="text" name="phone" id="phone" placeholder="Phone">
             <br><br>
-            <input type="button" name="add" id="add" value="Add Contact">
+            <input type="submit" name="add" id="add" value="Add Contact">
             <br><br>
 
         </form>
