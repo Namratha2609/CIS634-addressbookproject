@@ -21,8 +21,9 @@
     </header>
     <div class="contacts">
         <div class="search">
+            <a href="addContact.php" class="btn-add">Add Contact</a>
             <input type="text" name="search" id="search" placeholder="search">
-        </div>
+        </div><br><br>
         <table>
             <tr>
                 <th>Name</th>
