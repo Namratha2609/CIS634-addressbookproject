@@ -1,3 +1,12 @@
+<?php 
+session_start();
+include 'connection.php';
+if(!isset($_SESSION['user'])){
+    $user=0;
+}else{
+    $user=1;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +25,28 @@
     <header>
         <nav>
             <h2>Contacts Details</h2>
-            <a href="#">Logout</a>
+            <?php
+            if($user==1){
+                ?>
+                <a href="logout.php">Logout</a>
+                <?php
+            }
+            ?>
         </nav>
     </header>
     <div class="contacts">
         <div class="search">
-            <a href="addContact.php" class="btn-add">Add Contact</a>
-            <input type="text" name="search" id="search" placeholder="search">
+            <?php
+            if($user==1){
+                ?>
+                <a href="addContact.php" class="btn-add">Add Contact</a>
+                <?php
+            }
+            ?>
+                    <form action="searchContact.php" method="POST" id="search_form">
+                        <input type="text" name="search" id="search" placeholder="search">
+                        <input type="submit" class="searchBtn" name="sSubmit" id="sSubmit" value="Search Contact">
+                    </form>
         </div><br><br>
         <table>
             <tr>
@@ -30,17 +54,51 @@
                 <th>Address</th>
                 <th>Email</th>
                 <th>Phone</th>
-                <th>Action</th>
+                <?php
+            if($user==1){
+                ?>
+                    <th>Action</th>
+                    <?php
+            }
+            ?>
+
             </tr>
-            <tr>
-                <td>Name1</td>
-                <td>Address1</td>
-                <td>Email1</td>
-                <td>Phone1</td>
-                <td><button class="delete">Delete</button></td>
-            </tr>
+            <?php
+            $sql = "SELECT * FROM contacts";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                ?>
+
+                <tr>
+                    <td>
+                        <?php echo $row['name']; ?>
+                    </td>
+                    <td>
+                        <?php echo $row['address']; ?>
+                    </td>
+                    <td>
+                        <?php echo $row['email']; ?>
+                    </td>
+                    <td>
+                        <?php echo $row['phone']; ?>
+                    </td>
+                    <?php
+            if($user==1){
+                ?>
+                        <td><a href="deleteContact.php?phone=<?php echo $row['phone']; ?>" class="delete">Delete</a></td>
+                        <?php
+            }
+            ?>
+
+                </tr>
+                <?php
+            }}
+            ?>
         </table>
     </div>
+
+
 </body>
 
 </html>

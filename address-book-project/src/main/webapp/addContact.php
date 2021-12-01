@@ -9,12 +9,14 @@
     <link rel="stylesheet" type="text/css" href="css/style1.css">
     <link rel="stylesheet" type="text/css" href="css/style2.css">
     <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <script src="js/add_validation.js"></script>
 </head>
 
 <body>
+
     <div class="add-contact">
         <h2>Add Contact</h2><br>
-        <form id="contact" name="contact" method="post" action="login.php" onsubmit="return validate()">
+        <form id="contact" name="contact" method="post" action="addContacts.php" onsubmit="return validate()">
             <label><b>Name</b></label>
             <input type="text" name="name" id="name" placeholder="Name">
             <br><br>
